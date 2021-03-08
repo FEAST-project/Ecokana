@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!--
+	This App uses Twemoji.
+	Copyright 2019 Twitter, Inc and other contributors
+	Code licensed under the MIT License: http://opensource.org/licenses/MIT
+	Graphics licensed under CC-BY 4.0: https://creativecommons.org/licenses/by/4.0/
+-->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+		<!--
+        <meta http-equiv="Content-Security-Policy" content="default-src gap: 'unsafe-inline' *">
+        -->
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src gap: 'unsafe-inline' *; img-src 'self' data: content:;"
+		/>
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="msapplication-tap-highlight" content="no" />
+		<meta
+			name="viewport"
+			content="initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no, width=device-width, height=device-height, viewport-fit=cover"
+		/>
+
+		<!-- CSS読み込み -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="lib/jquery/jquery-1.5.0.mobile.min.css"
+		/>
+		<link rel="stylesheet" type="text/css" href="lib/onsenui/css/onsenui.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="lib/onsenui/css/onsen-css-components.css"
+		/>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="lib/jqplot/jquery.jqplot.min.css"
+		/>
+
+		<!-- 画面css読み込み -->
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.css" />
+		<link rel="stylesheet" type="text/css" href="css/category.css" />
+		<link rel="stylesheet" type="text/css" href="css/product_list.css" />
+		<link rel="stylesheet" type="text/css" href="css/product.css" />
+		<link rel="stylesheet" type="text/css" href="css/requestInfo.css" />
+		<link rel="stylesheet" type="text/css" href="css/setting.css" />
+		<link rel="stylesheet" type="text/css" href="css/about.css" />
+		<link rel="stylesheet" type="text/css" href="css/JANCodeSearch.css" />
+
+		<!-- ライブラリ読み込み -->
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="lib/onsenui/js/onsenui.js"></script>
+		<script
+			type="text/javascript"
+			src="lib/jquery/jquery-1.11.1.min.js"
+			id="cordova-jquery"
+		></script>
+		<script
+			type="text/javascript"
+			src="lib/jquery/jquery-1.5.0.mobile.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="lib/jqplot/jquery.jqplot.min.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="lib/jqplot/jqplot.pieRenderer.js"
+		></script>
+
+		<!-- 各画面処理読み込み -->
+		<script type="text/javascript" src="js/common.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="js/scan.js" charset="UTF-8"></script>
+		<script
+			type="text/javascript"
+			src="js/drawCategory.js"
+			charset="UTF-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="js/drawProduct_list.js"
+			charset="UTF-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="js/drawProduct.js"
+			charset="UTF-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="js/showStatistics.js"
+			charset="UTF-8"
+		></script>
+		<script
+			type="text/javascript"
+			src="js/requestInfo.js"
+			charset="UTF-8"
+		></script>
+		<script type="text/javascript" src="js/setting.js" charset="UTF-8"></script>
+		<script
+			type="text/javascript"
+			src="js/JANCodeSearch.js"
+			charset="UTF-8"
+		></script>
+
+		<!-- ブラウザ用タイトル -->
+		<title>Ecokana</title>
+	</head>
+
+	<body>
+		<ons-navigator
+			var="navi"
+			id="navi"
+			page="home.html"
+			swipeable
+			swipe-target-width="150px"
+			swipeable="force"
+		>
+		</ons-navigator>
+	</body>
+</html>

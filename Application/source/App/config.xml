@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- widget id…
+test："com.example.id"
+-->
+<widget id="com.example.id" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+    <!-- アプリ名 -->
+    <name>エコかな</name>
+
+    <!-- 接続api変更スクリプト -->
+    <!-- valueを指定する(target.json参照) -->
+    <preference name="targetAPI" value="'test'" />
+
+    <hook src="www/js/changeEnvVariables_afterPrepare.js" type="after_prepare" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap: file:; style-src 'self' 'unsafe-inline'; img-src 'self' data: gap:; script-src * 'unsafe-inline' 'unsafe-eval'" />
+
+    <!-- アプリ説明 -->
+    <description>
+        食品情報の見える化アプリ
+    </description>
+
+    <!-- 製作者情報 -->
+    <author email="emailAddress" href="ttp://appWebSite.URL/">
+        製作者名
+    </author>
+
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="cordova-plugin-camera" spec="~2.3.1">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="My App would like to access your camera, to take photos of your documents." />
+    </plugin>
+    <plugin name="cordova-plugin-qr-barcode-scanner">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="abc123" />
+    </plugin>
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+]
+    
+    <preference name="Orientation" value="portrait" />
+    <preference name="keepRunning" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+
+    <preference name="SplashScreenDelay" value="1500" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+
+    <preference name="android-build-tool" value="gradle" />
+
+    <icon src="res/icon.png" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <icon density="ldpi" src="www/img/icon/icon-ldpi.png" />
+        <icon density="mdpi" src="www/img/icon/icon-mdpi.png" />
+        <icon density="hdpi" src="www/img/icon/icon-hdpi.png" />
+        <icon density="xhdpi" src="www/img/icon/icon-xhdpi.png" />
+        <icon density="xxhdpi" src="www/img/icon/icon-xxhdpi.png" />
+        <icon density="xxxhdpi" src="www/img/icon/icon-xxxhdpi.png" />
+
+        <splash src="www/img/icon/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="www/img/icon/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="www/img/icon/splash-port-hdpi.png" density="port-hdpi"/>
+        <splash src="www/img/icon/splash-port-xhdpi.png" density="port-xhdpi"/>
+        <splash src="www/img/icon/splash-port-xxhdpi.png" density="port-xxhdpi"/>
+        <splash src="www/img/icon/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
+
+        <preference name="android-targetSdkVersion" value="29" />
+    </platform>
+
+
+    <platform name="ios">
+        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+            <string>
+                カメラは商品バーコードのスキャンに使用します。スキャンしたデータは商品検索にのみ使用されます。
+                The app will need access to your camera in order to scan bar-codes. The scanned data is used for product search only.
+            </string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
+            <string>
+                カメラは商品バーコードのスキャンに使用します。スキャンしたデータは商品検索にのみ使用されます。
+                The app will need access to your camera in order to scan bar-codes. The scanned data is used for product search only.
+            </string>
+        </edit-config>
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <icon height="180" src="www/img/icon/icon-60@3x.png" width="180" />
+        <icon height="60" src="www/img/icon/icon-60.png" width="60" />
+        <icon height="120" src="www/img/icon/icon-60@2x.png" width="120" />
+        <icon height="76" src="www/img/icon/icon-76.png" width="76" />
+        <icon height="152" src="www/img/icon/icon-76@2x.png" width="152" />
+        <icon height="40" src="www/img/icon/icon-40.png" width="40" />
+        <icon height="80" src="www/img/icon/icon-40@2x.png" width="80" />
+        <icon height="57" src="www/img/icon/icon.png" width="57" />
+        <icon height="114" src="www/img/icon/icon@2x.png" width="114" />
+        <icon height="72" src="www/img/icon/icon-72.png" width="72" />
+        <icon height="144" src="www/img/icon/icon-72@2x.png" width="144" />
+        <icon height="29" src="www/img/icon/icon-small.png" width="29" />
+        <icon height="58" src="www/img/icon/icon-small@2x.png" width="58" />
+        <icon height="50" src="www/img/icon/icon-50.png" width="50" />
+        <icon height="100" src="www/img/icon/icon-50@2x.png" width="100" />
+        <icon height="1024" src="www/img/icon/icon-1024.png" width="1024" />
+        <icon height="87" src="www/img/icon/Icon-Small@3x.png" width="87" />
+        <icon height="20" src="www/img/icon/icon-20.png" width="20" />
+        <icon height="120" src="www/img/icon/icon-40@3x.png" width="120" />
+        <icon height="40" src="www/img/icon/icon-Small-40.png" width="40" />
+        <icon height="80" src="www/img/icon/icon-Small-40@2x.png" width="80" />
+        <icon height="120" src="www/img/icon/icon-Small-40@3x.png" width="120" />
+        <icon height="48" src="www/img/icon/Icon-24@2x.png" width="48" />
+        <icon height="55" src="www/img/icon/Icon-27.5@2x.png" width="55" />
+        <icon height="88" src="www/img/icon/Icon-44@2x.png" width="88" />
+        <icon height="167" src="www/img/icon/Icon-83.5@2x.png" width="167" />
+        <icon height="172" src="www/img/icon/Icon-86@2x.png" width="172" />
+        <icon height="196" src="www/img/icon/Icon-98@2x.png" width="196" />
+        <icon height="216" src="www/img/icon/Icon-108@2x.png" width="216" />
+
+        <splash src="www/img/icon/Default~iphone.png" width="320" height="480"/>
+        <splash src="www/img/icon/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="www/img/icon/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="www/img/icon/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="www/img/icon/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="www/img/icon/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="www/img/icon/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="www/img/icon/Default-667h.png" width="750" height="1334"/>
+        <splash src="www/img/icon/Default-736h.png" width="1242" height="2208"/>
+        <splash src="www/img/icon/Default-Landscape-736h.png" width="2208" height="1242"/>
+        <splash src="www/img/icon/Default-2436h.png" width="1125" height="2436"/>
+        <splash src="www/img/icon/Default-Landscape-2436h.png" width="2436" height="1125"/>
+    </platform>
+
+    <!--
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    -->
+    <preference name="WkWebViewOnly" value="true" />
+
+</widget>

@@ -1,0 +1,163 @@
+/* ホーム画面 */
+#home\.html .page__content {
+	background-color:white !important
+}
+
+/* 背景画像 */
+.home-top {
+	background-image: url("../img/home/27.トップ.png");
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 2vh;
+	background-size: 43vh;
+}
+.home-top > div::before {
+	content: "";
+	background-color: rgba(82, 160, 149, 0.1);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+/* ボタン＿配置位置 */
+.home-top > div {
+	padding-top: 3vh;
+}
+div.home-button-list {
+	margin: 0 8vw;
+	margin-top: 45vh;
+}
+span.home-button-list-child {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+span.home-button-list-small {
+	display: flex;
+	margin-top: 2vh;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	text-align: right;
+}
+
+/* バーコード読み取り、JANコード検索、生鮮食品・お惣菜ボタン */
+ons-button.home-IDEA,
+ons-button.home-SCAN {
+	text-align: center;
+	width: 84vw;
+	margin: 0.3em 0;
+	background-color: #ffffff;
+	color: #39886f;
+}
+.home-IDEA .en {
+	display: block;
+	line-height: 4.5vw;
+	white-space: normal;
+}
+
+/* 商品一覧、設定ボタン */
+ons-button.home-JICFS,
+ons-button.home-SETTING {
+	text-align: center;
+	width: 41vw;
+	margin: 0.3em 0;
+	background-color: #ffffff;
+	color: #39886f;
+}
+
+/* このアプリについて、プライバシーポリシーボタン */
+ons-button.home-about,
+ons-button.home-policy {
+	text-align: center;
+	width: 41vw;
+	margin: 0.3em 0;
+	padding-right: 0;
+	padding-left: 0;
+	background-color: #ffffff;
+	color: #39886f;
+}
+
+/* 言語切り替えボタン */
+ons-button.home-language-jp,
+ons-button.home-language-en {
+	position: absolute;
+	right: 8vw;
+	margin: 0.3em 0;
+	z-index: 1000;
+}
+
+/* 「このアプリについて」ダイアログメッセージ */
+.aboutDialog-popup {
+	display: none;
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+.aboutDialog-content {
+	background: #fff;
+	padding: 10px 20px 35px 25px;
+	width: 60%;
+	border-radius: 3px;
+}
+#aboutDialog-close {
+	width: 35px;
+	height: 35px;
+	padding: 0;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	margin: 0 0 10px auto;
+	right: -10px;
+	box-shadow: none;
+}
+
+/* jquery,onsenのボタン色を上書き */
+[class^="home"].button {
+	background-color: #ffffff;
+	color: #39886f;
+	border: 1px solid black;
+}
+[class^="home"].button:active {
+	background-color: #ffffff;
+	color: #39886f;
+	transition: none;
+}
+
+/* フォント */
+.home-font-small {
+	font-size: 12px;
+}
+@media (min-width: 300px) {
+	.home-font-small {
+		font-size: calc(12px + ((1vw - 3px) * 2.2));
+	}
+}
+@media (min-width: 1024px) {
+	.home-font-small {
+		font-size: 28px;
+	}
+}
+
+/* フォント-android専用 */
+.home-font-small-android {
+	font-size: 9.5px;
+}
+@media (min-width: 280px) {
+	.home-font-small-android {
+		font-size: calc(9.5px + ((1vw - 2.8px) * 3.3));
+	}
+}
+@media (min-width: 1024px) {
+	.home-font-small-android {
+		font-size: 34px;
+	}
+}

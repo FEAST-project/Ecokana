@@ -1,0 +1,90 @@
+<!-- 商品一覧（ページ表示）、商品一覧（IDEA/JICFS共通） -->
+<ons-page id="product_list.html">
+	<ons-toolbar class="product_list-toolbar">
+		<!--「ホームに戻る」ダイアログ表示時にツールバーをモーダル-->
+		<div class="toHomeDialog-toolbar" style="top: 0"></div>
+
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center product_list-title">
+			<div class="font-small">
+				<span class="product_list-title1jp jp"></span
+				><span class="product_list-title1en en"></span>
+			</div>
+			<div class="font-middle">
+				<span class="product_list-title2jp jp"></span
+				><span class="product_list-title2en en"></span>
+				<span class="font-small" style="line-height: 2vh">
+					<span class="product_list-title3jp jp"></span
+					><span class="product_list-title3en en"></span>
+				</span>
+			</div>
+		</div>
+
+		<!-- ツールバー右側の要素 -->
+		<div
+			class="right"
+			onclick="navi.resetToPage('home.html', {animation:'lift', data:{type:'backToHome'}} )"
+		></div>
+	</ons-toolbar>
+
+	<!-- 名前順表示のために表示中画面のデータと上位10%スコアを保持-->
+	<input type="hidden" class="product_list-tempRes" />
+	<input type="hidden" class="product_list-tempScore10" />
+
+	<!--「ホームに戻る」ダイアログ-->
+	<div class="toHomeDialog-popup">
+		<div class="toHomeDialog-content font-small">
+			<span>
+				<span class="jp" style="vertical-align: middle">ホームに戻る</span>
+				<span class="en" style="vertical-align: middle">Go to home screen</span>
+				<button
+					onclick="hideToHome()"
+					id="toHomeDialog-close"
+					class="ui-btn ui-shadow ui-corner-all"
+				>
+					<img
+						src="img/common/close.png"
+						width="16"
+						height="16"
+						style="vertical-align: middle; pointer-events: none"
+					/>
+				</button>
+			</span>
+		</div>
+	</div>
+
+	<div class="product_list-data">
+		<div class="center">
+			<div class="product_list-placeholder">
+				<!-- drawProduct_list.jsによって描画 -->
+				<!-- 構造は以下コメント部のようになる
+                <ons-button onclick="navi.pushPage('product.html', {animation:'slide', data:{type:'IDEA',code: '111001'}} )">
+                    <span class="font-middle">
+                        <span class="jp">xxx</span><span class="en">xxxx</span>
+                    </span>
+                    <span class="font-score">xxx</span>
+                    </span>
+                </ons-button>
+             -->
+			</div>
+		</div>
+	</div>
+	<ons-bottom-toolbar>
+		<!--「ホームに戻る」ダイアログ表示時にツールバーをモーダル-->
+		<div class="toHomeDialog-toolbar"></div>
+		<div class="product_list-footer">
+			<span onclick="navi.pushPage('scan.html', { animation : 'slide' } )"
+				><img class="product_list-footerIcon" src="img/common/barcode.png"
+			/></span>
+			<span onclick=""></span>
+			<span onclick=""></span>
+		</div>
+	</ons-bottom-toolbar>
+</ons-page>

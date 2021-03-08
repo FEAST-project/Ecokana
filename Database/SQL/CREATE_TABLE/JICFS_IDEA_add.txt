@@ -1,0 +1,10 @@
+CREATE TABLE JICFS_IDEA_add
+(
+`Product_ID`											int	NOT NULL	PRIMARY KEY,
+`JICFS分類`												varchar(100)	,
+`JANコード`												varchar(100)	,
+`補正環境評価`											decimal(40,30)	,
+`補正社会評価`											decimal(40,30)	,
+`補正健康評価`											decimal(40,30)	,
+`補正総合スコア`										decimal(40,30)
+)

@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "cordova-plugin-whitelist": "1",
+    "cordova-plugin-camera": "~2.3.1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-camera": {
+        "CAMERA_USAGE_DESCRIPTION": "My App would like to access your camera, to take photos of your documents."
+      },
+      "cordova-plugin-qr-barcode-scanner": {
+        "CAMERA_USAGE_DESCRIPTION": "abc123"
+      }
+    },
+    "platforms": []
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,120 @@
+<!-- 設定画面1 -->
+<ons-page id="setting_1.html">
+	<ons-toolbar class="setting-toolbar">
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center setting-title">
+			<div class="font-large">
+				<span class="setting-title jp">設定</span
+				><span class="setting-title en">Setting</span>
+			</div>
+		</div>
+	</ons-toolbar>
+
+	<div class="setting-data">
+		<div class="center">
+			<input type="hidden" id="setting-productID" value="" />
+
+			<div class="font-small setting">
+				<span class="jp"
+					>各商品の環境・社会・健康評価に基づき、商品一覧画面の表示順序を設定できます。</span
+				>
+				<span class="en"
+					>Customize the settings based on the environmental, social and public
+					health impacts.</span
+				>
+			</div>
+
+			<ons-button
+				onclick="navi.pushPage('setting_2.html', {animation:'slide', data:{type:'env'}} )"
+				class="setting-env"
+			>
+				<span class="font-middle">
+					<span class="jp">環境</span>
+					<span class="en font-small">The Environmental Impacts</span>
+				</span>
+				<span class="font-small">
+					<span class="jp"></span>
+					<span class="en"></span>
+				</span>
+				<span class="setting_1-fa-icon">
+					<ons-icon icon="angle-right"></ons-icon>
+				</span>
+			</ons-button>
+			<ons-button
+				onclick="navi.pushPage('setting_2.html', {animation:'slide', data:{type:'soc'}} )"
+				class="setting-soc"
+			>
+				<span class="font-middle">
+					<span class="jp">社会</span>
+					<span class="en font-small">The Social Impacts</span>
+				</span>
+				<span class="font-small">
+					<span class="jp"></span>
+					<span class="en"></span>
+				</span>
+				<span class="setting_1-fa-icon">
+					<ons-icon icon="angle-right"></ons-icon>
+				</span>
+			</ons-button>
+			<ons-button
+				onclick="navi.pushPage('setting_2.html', {animation:'slide', data:{type:'hel'}} )"
+				class="setting-hel"
+			>
+				<span class="font-middle">
+					<span class="jp">健康</span>
+					<span class="en font-small">The Public Health Impacts</span>
+				</span>
+				<span class="font-small">
+					<span class="jp"></span>
+					<span class="en"></span>
+				</span>
+				<span class="setting_1-fa-icon">
+					<ons-icon icon="angle-right"></ons-icon>
+				</span>
+			</ons-button>
+
+			<ons-button onclick="clearImportance()" class="setting-clear">
+				<span class="jp">設定クリア</span>
+				<span class="en">Clear the settings</span>
+			</ons-button>
+
+			<hr />
+			<ons-button
+				onclick="saveSettings('history.txt','',true)"
+				class="setting-delHis"
+			>
+				<span class="jp">これまでの検索履歴を消去</span>
+				<span class="en">Delete your search history</span>
+			</ons-button>
+
+			<ons-button
+				onclick="loadSettings('history.txt')"
+				class="setting-debugHis"
+			>
+				<span class="jp">検索履歴デバッグ</span>
+				<span class="en">Debug history</span>
+			</ons-button>
+
+			<ons-button onclick="resetCounter()" class="setting-resetCounter">
+				<span class="jp">カウンターリセット</span>
+				<span class="en">Reset Counter</span>
+			</ons-button>
+		</div>
+	</div>
+
+	<ons-bottom-toolbar>
+		<div class="setting-footer">
+			<ons-button onclick="saveImportance()" class="setting-confirm">
+				<span class="jp">適用</span>
+				<span class="en">Apply</span>
+			</ons-button>
+		</div>
+	</ons-bottom-toolbar>
+</ons-page>

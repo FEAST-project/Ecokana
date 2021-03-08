@@ -1,0 +1,29 @@
+<!-- JANコード検索 -->
+<ons-page id="JANCodeSearch.html">
+	<ons-toolbar class="JANCodeSearch-toolbar">
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center JANCodeSearch-title">
+			<div class="font-large">
+				<span class="JANCodeSearch-title jp">JANコードで検索</span>
+				<span class="JANCodeSearch-title en">Search by JAN code</span>
+			</div>
+		</div>
+	</ons-toolbar>
+
+	<div class="JANCodeSearch-data">
+		<p class="jp font_s">JANコード：</p>
+		<p class="en font_s">JAN code：</p>
+		<input id="targetJAN" type="tel" maxlength="13" change="()" />
+		<ons-button onclick="JANCodeSearch()" class="JANCodeSearch-confirm">
+			<span class="jp">検索</span>
+			<span class="en">Search</span>
+		</ons-button>
+	</div>
+</ons-page>

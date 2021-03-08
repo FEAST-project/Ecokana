@@ -1,0 +1,67 @@
+/* JANコード検索 */
+/* ツールバー＿全体 */
+#JANCodeSearch\.html ons-toolbar {
+	background: #ffffff;
+}
+.JANCodeSearch-toolbar,
+.JANCodeSearch-toolbar > div {
+	height: 10vh;
+	top: 1vh;
+	line-height: 4vh;
+	color: #52a095;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+/* ツールバー＿戻るボタン */
+.JANCodeSearch-toolbar .left {
+	padding-left: 1vw;
+	width: 15vw;
+	min-width: 18vw;
+}
+.JANCodeSearch-toolbar polygon {
+	fill: #67d699 !important;
+}
+
+/* ツールバー＿画面タイトル */
+.JANCodeSearch-title {
+	text-align: left;
+	vertical-align: middle;
+	line-height: 10vh;
+}
+
+/* メイン */
+#JANCodeSearch\.html .page__content {
+	top: 10vh !important;
+	padding-top: 2vh;
+	padding-bottom: 5vh;
+	z-index: 10;
+}
+.JANCodeSearch-data {
+	margin: 0 5vw;
+}
+
+/* メイン＿検索フォーム */
+.JANCodeSearch-data p {
+	margin: 0;
+}
+.JANCodeSearch-data input {
+	width: 90vw;
+	box-sizing: border-box;
+	line-height: 1.5;
+}
+
+/* メイン＿検索ボタン */
+ons-button.JANCodeSearch-confirm {
+	text-align: center;
+	width: 90vw;
+	margin-top: 15px;
+	background-color: #67d699;
+	color: #ffffff;
+	text-shadow: none !important;
+}
+ons-button.JANCodeSearch-confirm:active {
+	background-color: #67d699;
+	color: #ffffff;
+	transition: none;
+}

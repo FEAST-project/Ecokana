@@ -1,0 +1,339 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+/* フォント設定 
+@font-face {
+    font-family: 'DSEG8';
+    src: url(../fonts/migu-1p-regular.ttf);
+}
+
+ /* フォントサイズ設定　以下3つをセットで設定する 
+.product-toolbar,
+.product-toolbar > div{
+    font-size: 14px;
+}
+@media (min-width: 320px) {
+    .product-toolbar,
+    .product-toolbar > div{
+      font-size: calc(14px + ((1vw - 6.4px)*2.5));
+    }
+}
+@media (min-width: 1200px) {
+    .product-toolbar,
+    .product-toolbar > div{
+      font-size: 30px; 
+    }
+}
+font-size = calc(1rem + ((1vw - XX) * YY))
+- XX : ViewPort の最小幅 / 100 (単位 : px)
+- YY : 100 * フォントサイズの差 / ViewPort 幅の差 (単位 : なし)
+
+*/
+
+/* iOSのバウンススクロールを回避 */
+/* WKWebView対応:対象にbody下divを追加・mix,max-height設定を追加 */
+html,
+body,
+body > div:first-child {
+	margin: 0 !important;
+	padding: 0 !important;
+	min-height: 100vh !important;
+	max-height: 100vh !important;
+	height: 100vh !important;
+	overflow: hidden !important;
+	font-family: sans-serif;
+}
+
+/* スキャン画面のロード表示 */
+#loader-bg {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 100001;
+	display: block;
+}
+#loader-bg #loading {
+	position: absolute;
+	top: 50%;
+	left: 45vw;
+}
+.zmdi-spinner {
+	color: white;
+}
+
+/*  「ホームに戻る」ダイアログメッセージ */
+/* category,product_listの両方で使用するのでcommon.cssに設定する */
+.toHomeDialog-popup,
+.toHomeDialog-toolbar {
+	display: none;
+	height: inherit;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: inherit;
+	left: 0;
+	justify-content: flex-end;
+	align-items: flex-start;
+	z-index: 1000;
+}
+.toHomeDialog-content {
+	position: relative;
+	background: #fff;
+	padding: 0px 10px;
+	top: 1vh;
+	right: 1vw;
+	width: auto;
+	color: #1f1f21;
+	font-weight: normal;
+	border-radius: 3px;
+}
+#toHomeDialog-close {
+	display: unset;
+	width: 35px;
+	height: 35px;
+	padding: 0;
+	padding-bottom: 2px;
+	box-shadow: none;
+}
+
+/* フォントサイズ設定　全画面で共通 */
+.font-large {
+	font-size: 20px;
+}
+@media (min-width: 320px) {
+	.font-large {
+		font-size: calc(20px + ((1vw - 3.2px) * 1.7));
+	}
+}
+@media (min-width: 1024px) {
+	.font-large {
+		font-size: 32px;
+	}
+}
+
+.font-middle {
+	font-size: 16px;
+}
+@media (min-width: 320px) {
+	.font-middle {
+		font-size: calc(16px + ((1vw - 3.2px) * 1.7));
+	}
+}
+@media (min-width: 1024px) {
+	.font-middle {
+		font-size: 28px;
+	}
+}
+
+.font-small {
+	font-size: 12px;
+}
+@media (min-width: 320px) {
+	.font-small {
+		font-size: calc(12px + ((1vw - 3.2px) * 1.7));
+	}
+}
+@media (min-width: 1024px) {
+	.font-small {
+		font-size: 24px;
+	}
+}
+
+.font-score {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: #ffffff;
+	text-shadow: none;
+}
+@media (min-width: 320px) {
+	.font-score {
+		font-size: calc(18px + ((1vw - 3.2px) * 1.7));
+	}
+}
+@media (min-width: 1024px) {
+	.font-score {
+		font-size: 30px;
+	}
+}
+
+/* 画像の色を白に変換 */
+.BtoW {
+	filter: brightness(0) invert(1);
+}
+
+/* 英語表記を非表示 */
+.en,
+.jp {
+	display: none;
+}
+
+/* onsenのツールバー・ボタンを上書き */
+ons-toolbar,
+ons-button {
+	box-shadow: none !important;
+	font-family: sans-serif !important;
+}
+.toolbar--material,
+.button--material {
+	box-shadow: none;
+}
+.back-button {
+	width: 10vw;
+	height: 10vh;
+	padding: 0px 10px 0px 0px;
+}
+.back-button__icon {
+	margin-left: 10px;
+}
+
+/* onsenのフッター色を上書き */
+.bottom-bar {
+	background: transparent;
+	height: calc(9vh + 1px);
+	z-index: 10;
+}
+
+/* iosのツールバーの配置を上書き */
+.page[status-bar-fill] > .toolbar {
+	padding-top: 0px !important;
+}
+.page[status-bar-fill] > .page__content {
+	top: 0px !important;
+}
+.page[status-bar-fill]
+	> .toolbar:not(.toolbar--transparent)
+	+ .page__background,
+.page[status-bar-fill]
+	> .toolbar:not(.toolbar--cover-content)
+	+ .page__background
+	+ .page__content {
+	top: 0px !important;
+}
+
+/* onsenのチェックボックス色を上書き */
+:checked + .checkbox__checkmark:before {
+	background-color: inherit;
+	border-color: inherit;
+}
+:checked + .checkbox__checkmark:after,
+:disabled:checked + .checkbox--material__checkmark:after {
+	border-color: #00ff00;
+	border-left-width: 5px;
+	border-bottom-width: 5px;
+	padding-left: 3px;
+	padding-bottom: 2px;
+	top: -1px;
+}
+:disabled + .checkbox__checkmark,
+ons-checkbox[disabled] {
+	opacity: 1;
+}
+:disabled:checked + .checkbox--material__checkmark:before {
+	background-color: inherit;
+}
+
+/* jqplot.jsのグラフを上書き */
+table.jqplot-table-legend {
+	display: table-cell;
+}
+.jqplot-data-label {
+	font-weight: bolder;
+}
+.jqplot-target {
+	color: #000000;
+	text-shadow: none;
+}
+
+/* 以下はcordovaの初期設定（変更不可） */
+/* Landscape layout (with min-width) */
+* {
+	-webkit-tap-highlight-color: rgba(
+		0,
+		0,
+		0,
+		0
+	); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+	.app {
+		background-position: left center;
+		padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
+		margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
+		/* offset horizontal: half of image width and text area width */
+	}
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px;
+	overflow: visible;
+	padding: 0px;
+	text-align: center;
+}
+
+.event {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #ffffff;
+	font-size: 12px;
+	margin: 0px 30px;
+	padding: 2px 0px;
+}
+
+.event.listening {
+	background-color: #333333;
+	display: block;
+}
+
+.event.received {
+	background-color: #4b946a;
+	display: none;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.blink {
+	animation: fade 3000ms infinite;
+	-webkit-animation: fade 3000ms infinite;
+}

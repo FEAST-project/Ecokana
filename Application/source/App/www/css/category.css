@@ -1,0 +1,172 @@
+/* 商品カテゴリー一覧（IDEA/JICFS共通） */
+/* ツールバー＿全体 */
+#category\.html ons-toolbar {
+	background: #ffffff;
+}
+.category-toolbar,
+.category-toolbar > div {
+	height: 10vh;
+	top: 1vh;
+	line-height: 4vh;
+	color: #52a095;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+/* ツールバー＿戻るボタン */
+.category-toolbar > .left {
+	padding-left: 1vw;
+	width: 19vw;
+}
+.category-toolbar polygon {
+	fill: #67d699 !important;
+}
+
+/* ツールバー＿画面タイトル */
+.category-toolbar .center {
+	width: 70vw;
+	left: 15vw;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	pointer-events: none;
+	z-index: 100;
+}
+.category-toolbar .center > span {
+	line-height: 10vh;
+}
+
+/* ツールバー＿ロゴアイコン */
+.category-toolbar > .right {
+	position: absolute;
+	width: 20%;
+	top: 0;
+	right: 0;
+}
+.category-toolbar img {
+	max-height: 7vh;
+	padding: 2vw;
+/*	filter: brightness(0) invert(0.7);*/
+}
+
+/* メイン */
+#category\.html .page__content {
+	top: 10vh !important;
+	height: 81vh;
+	z-index: 10;
+}
+.category-data {
+	margin: auto;
+}
+
+/* メイン＿カテゴリー表示 */
+.category-data .center > table {
+	text-align: center;
+	padding-top: 10px;
+}
+.category-data .center > table tr td {
+	width: 28vw;
+	padding: 0 1vw;
+}
+
+/* メイン＿ボタン*/
+.category-button-list {
+	margin: 0 5vw;
+}
+.category-button-list-child {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.category-button-list-child > ons-button {
+	display: flex;
+	width: 40vw;
+	height: 40vw;
+	background-color: #ffffff;
+	font-weight: bold;
+	justify-content: center;
+	text-align: center;
+	margin: 0.5em 0;
+}
+
+/* メイン＿ボタン（イラスト無し）*/
+.category_smallButton {
+	height: 12vh !important;
+}
+.category_smallButton .category-text {
+	top: 50% !important;
+	transform: translateY(-50%);
+	bottom: unset;
+}
+
+/* メイン＿ボタン内フォント */
+.category-text {
+	position: absolute;
+	bottom: 2vw;
+}
+.category-text .font-middle {
+	color: #52a095;
+	width: 38vw;
+	white-space: normal;
+	line-height: 2.5vh;
+}
+.category-text .font-small {
+	color: #808080;
+	line-height: normal;
+}
+.category-text .en {
+	word-wrap: break-word;
+}
+@media (max-width: 360px) {
+	.category-text .en {
+		font-size: 12px;
+	}
+}
+
+/* メイン＿ボタン内イラスト */
+.category-icon {
+	max-height: 18vw;
+	max-width: 30vw;
+	padding-top: 5vw;
+/*	filter: brightness(0) invert(0.7);*/
+}
+
+/* jquery,onsenのボタン色を上書き */
+[class^="category"] .button {
+	background-color: #ffffff;
+	color: #52a095;
+	border-radius: 20px;
+}
+[class^="category"] .button:active {
+	background-color: #ffffff;
+	color: #52a095;
+	transition: none;
+}
+
+/* フッター＿全体 */
+.category-footer {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	background-color: #ffffff;
+}
+.category-footer > span {
+	height: 100%;
+	display: inherit;
+}
+.category-footer > span:nth-child(1),
+.category-footer > span:nth-child(3) {
+	width: 20%;
+}
+.category-footer > span:nth-child(2) {
+	width: 60%;
+}
+
+/* フッター＿ボタン */
+.category-footerIcon {
+	height: 70%;
+	display: flex;
+	margin: auto;
+	margin-bottom: 2vh;
+/*	filter: brightness(0) invert(0.7);*/
+}

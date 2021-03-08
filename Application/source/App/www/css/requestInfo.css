@@ -1,0 +1,49 @@
+/*  情報リクエストページ（IDEA/JICFS共通） */
+/* フォント */
+.font-large.requestInfo {
+	font-weight: bold;
+	text-align: center;
+	margin-top: 25vh;
+}
+.font-middle.requestInfo {
+	color: #808080;
+	text-align: center;
+	margin: 1vh 5vw 3vh 5vw;
+}
+
+/* 戻るボタン */
+.requestInfo-back {
+	color: #2f4f4f;
+	text-align: center;
+	margin-top: 3vh;
+	text-decoration: underline;
+	text-shadow: none;
+}
+
+/* 情報リクエストボタン */
+ons-button.requestInfo-request {
+	text-align: center;
+	width: 70vw;
+	background-color: #67d699;
+	color: #ffffff;
+	margin: 0vw 15vw;
+	text-shadow: none !important;
+}
+
+/* 情報リクエストボタン非活性 */
+ons-button.requestInfo-request-unable {
+	pointer-events: none;
+	color: gray !important;
+	background-color: darkseagreen !important;
+}
+
+/* jquery,onsenのボタン色を上書き */
+[class^="requestInfo"].button {
+	background-color: #67d699;
+	color: #ffffff;
+}
+[class^="requestInfo"].button:active {
+	background-color: #67d699;
+	color: #ffffff;
+	transition: none;
+}

@@ -1,0 +1,33 @@
+<!-- 情報リクエスト完了ページ（IDEA/JICFS共通） -->
+<ons-page id="requestInfo.html">
+	<div class="requestInfo-data">
+		<div class="center">
+			<input type="hidden" id="requestInfo-productID" value="" />
+
+			<div class="font-large requestInfo">
+				<span class="jp">情報リクエストの確定</span>
+				<span class="en">Confirm your request for more information</span>
+			</div>
+			<div class="font-middle requestInfo">
+				<span class="jp">この商品の足りない情報をリクエストしますか？</span>
+				<span class="en"
+					>Are you sure you would like to request the missing information for
+					this product?</span
+				>
+			</div>
+
+			<ons-button onclick="" class="requestInfo-request">
+				<span class="jp">はい、リクエストします</span>
+				<span class="en">Yes, request info</span>
+			</ons-button>
+
+			<div
+				class="font-middle requestInfo-back"
+				onclick="navi.popPage({ animation : 'slide' } )"
+			>
+				<span class="jp">もどる</span>
+				<span class="en">Cancel</span>
+			</div>
+		</div>
+	</div>
+</ons-page>

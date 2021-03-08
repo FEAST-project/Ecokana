@@ -1,0 +1,21 @@
+INSERT INTO JICFS_IDEA_add 
+(
+ `Product_ID`, 
+ `JICFS分類`, 
+ `JANコード`, 
+ `補正環境評価`, 
+ `補正社会評価`, 
+ `補正健康評価`, 
+ `補正総合スコア`
+)
+SELECT 
+ `Product_ID`, 
+ `JICFS分類`, 
+ `JANコード`,
+ 0,
+ 0,
+ 0,
+ 0
+FROM 
+JICFS_IDEA
+;

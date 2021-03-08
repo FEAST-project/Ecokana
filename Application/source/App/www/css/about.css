@@ -1,0 +1,81 @@
+/* このアプリについて */
+/* ツールバー＿全体 */
+#about\.html ons-toolbar {
+	background: #ffffff;
+}
+.about-toolbar,
+.about-toolbar > div {
+	height: 10vh;
+	top: 1vh;
+	line-height: 4vh;
+	color: #52a095;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+/* ツールバー＿戻るボタン */
+#about\.html .about-toolbar .left {
+	padding-left: 1vw;
+	width: 15vw;
+	min-width: 18vw;
+}
+.about-toolbar polygon {
+	fill: #67d699 !important;
+}
+
+/* ツールバー＿画面タイトル */
+.about-title {
+	text-align: left;
+	vertical-align: middle;
+	line-height: 10vh;
+}
+
+/* メイン */
+#about\.html .page__content {
+	top: 10vh !important;
+	padding-top: 2vh;
+}
+.about-data {
+	margin: 0 2vw 8vh 2vw;
+}
+
+/* フォント */
+.font-middle.about {
+	color: #808080;
+	margin: 0vh 5vw 1vh 2vw;
+}
+.font-small.about {
+	color: #808080;
+	margin: 0vh 5vw 2vh 5vw;
+}
+
+/* 上位10%アイコン */
+.about-top10 {
+	max-height: 1.3rem;
+	vertical-align: text-bottom;
+}
+
+/* 環境・社会・健康評価テーブル */
+.about-data table {
+	width: 95vw;
+}
+td.about {
+  vertical-align: top;
+}
+.about-data td img.illust {
+	max-height: 16vw;
+	max-width: 16vw;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 3%);
+}
+
+/* 総合スコア */
+.about-overallScore {
+	width: 85vw;
+}
+
+/* データなしイメージ */
+.about-noData {
+	width: 25vw;
+}

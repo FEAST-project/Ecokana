@@ -1,0 +1,58 @@
+﻿{
+	"IDEA_category1" :[
+			{ "id" : 1,  "namejp" : "肉類","namejpKana": "", "nameen" : "Meats", "img" : "img/IDEA_category1/1.肉類.png", "code" : "11", "cnt" : "3" },
+			{ "id" : 2,  "namejp" : "野菜・果物類","namejpKana": "", "nameen" : "Vegetables and Fruits", "img" : "img/IDEA_category1/13.野菜1.png", "code" : "12", "cnt" : "4" },
+			{ "id" : 3,  "namejp" : "魚介類","namejpKana": "", "nameen" : "Seafoods", "img" : "img/IDEA_category1/5.魚1.png", "code" : "13", "cnt" : "6" },
+			{ "id" : 4,  "namejp" : "お惣菜","namejpKana": "", "nameen" : "Deli", "img" : "img/IDEA_category1/12.総菜.png", "code" : "14", "cnt" : "1" }
+	],
+	"IDEA_category2" :	{ 
+		"11":[
+			{"id":1,"namejp":"牛","namejpKana": "","nameen":"Beef","img":"img/IDEA_category2/2.牛.png","code":"牛","cnt":"2"},
+			{"id":2,"namejp":"豚","namejpKana": "","nameen":"Pork","img":"img/IDEA_category2/3.豚.png","code":"豚","cnt":"2"},
+			{"id":3,"namejp":"鶏肉","namejpKana": "","nameen":"Chicken","img":"img/IDEA_category2/4.鶏.png","code":"鶏","cnt":"2"}
+		],
+		"12":[
+			{"id":1,"namejp":"野菜類","namejpKana": "","nameen":"Vegetables","img":"img/IDEA_category2/14.野菜2.png","code":"野菜類","cnt":"283"},
+			{"id":2,"namejp":"果物類","namejpKana": "","nameen":"Fruits","img":"img/IDEA_category2/16.果物.png","code":"果物類","cnt":"91"},
+			{"id":3,"namejp":"芋類","namejpKana": "","nameen":"Tubers and Roots","img":"img/IDEA_category2/15.芋.png","code":"芋類","cnt":"20"},
+			{"id":4,"namejp":"その他野菜類","namejpKana": "","nameen":"Other Types of Vegetables","img":"img/IDEA_category2/13.野菜1.png","code":"その他野菜類","cnt":"1"}
+		],
+		"13":[
+			{"id":1,"namejp":"魚類","namejpKana": "","nameen":"Fishes","img":"img/IDEA_category2/6.魚2.png","code":"魚類","cnt":"112"},
+			{"id":2,"namejp":"貝類","namejpKana": "","nameen":"Shellfish","img":"img/IDEA_category2/9.貝.png","code":"貝類","cnt":"3"},
+			{"id":3,"namejp":"海老・蟹類","namejpKana": "","nameen":"Prawns and Crabs","img":"img/IDEA_category2/7.海老.png","code":"海老・蟹類","cnt":"4"},
+			{"id":4,"namejp":"烏賊・蛸類","namejpKana": "","nameen":"Squid, Cuttlefish and Octopuses","img":"img/IDEA_category2/8.烏賊.png","code":"烏賊・蛸類","cnt":"8"},
+			{"id":5,"namejp":"その他魚介類","namejpKana": "","nameen":"Other Types of Seafoods","img":"img/IDEA_category2/10.しゃこ.png","code":"その他魚介類","cnt":"6"},
+			{"id":6,"namejp":"海藻類","namejpKana": "","nameen":"Seaweed","img":"img/IDEA_category2/11.海藻.png","code":"海藻類","cnt":"26"}
+		],
+		"14":[
+			{"id":1,"namejp":"揚げ物","namejpKana": "","nameen":"Deep-fried Foods","img":"img/IDEA_category2/12.総菜.png","code":"揚げ物","cnt":"1"}
+		]
+	},
+	"JICFS_category1" :[
+		{ "id" : 1,  "namejp" : "菓子類", "nameen" : "Snacks/Sweets/Confectioneries", "img" : "img/JICFS_category1/17.菓子1.png", "code" : "91", "cnt" : "2" },
+		{ "id" : 2,  "namejp" : "飲料・酒類", "nameen" : "Beverages and Alcohol", "img" : "img/JICFS_category1/19.牛乳.png", "code" : "92", "cnt" : "1" }
+
+	],
+	"JICFS_category2" :	{ 
+		"91":[
+			{"id":1,"namejp":"菓子","namejpKana": "かし","nameen":"Snacks/Sweets/Confectioneries ","img":"img/JICFS_category2/20.チョコレート.png","code":"9101","cnt":"1"},
+			{"id":2,"namejp":"その他菓子類","namejpKana": "そのたかしるい","nameen":"Others","img":"img/JICFS_category2/18.菓子2.png","code":"9102","cnt":"1"}
+		],
+		"92":[
+			{"id":1,"namejp":"乳飲料","namejpKana": "にゅういんりょう","nameen":"Milk Beverages","img":"img/JICFS_category2/19.牛乳.png","code":"9201","cnt":"1"}
+		]
+	},
+	"JICFS_category3" :	{ 
+		"9101":[
+			{"id":1,"namejp":"チョコレート","namejpKana": "ちょこれーと","nameen":"Chocolate","img":"","code":"910101","cnt":""},
+			{"id":2,"namejp":"ビスケット・クッキー","namejpKana": "びすけっと・くっきー","nameen":"Biscuts and Cookies","img":"","code":"910102","cnt":""}
+		],
+		"9102":[
+			{"id":1,"namejp":"その他菓子類","namejpKana": "そのたかしるい","nameen":"Others","img":"","code":"910201","cnt":""}
+		],
+		"9201":[
+			{"id":1,"namejp":"牛乳","namejpKana": "ぎゅうにゅう","nameen":"Milk","img":"","code":"920101","cnt":""}		
+		]
+	}
+}

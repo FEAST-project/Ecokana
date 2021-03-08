@@ -1,0 +1,51 @@
+<!-- 設定画面2 -->
+<ons-page id="setting_2.html">
+	<ons-toolbar class="setting-toolbar">
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center setting-title">
+			<div class="font-small">
+				<span class="setting-title1jp jp">設定</span
+				><span class="setting-title1en en">Settings</span>
+			</div>
+			<div class="font-large">
+				<span class="setting-title2jp jp"></span
+				><span class="setting-title2en en"></span>
+			</div>
+		</div>
+	</ons-toolbar>
+
+	<div class="setting-data">
+		<div class="center">
+			<input type="hidden" id="setting_2-type" value="" />
+			<ons-button onclick="changeImportance(1)" class="setting-imp1">
+				<span class="font-small">
+					<span class="jp">重要ではない</span>
+					<span class="en">Not important</span>
+				</span>
+				<span class="setting_2-fa-icon"> </span>
+			</ons-button>
+			<ons-button onclick="changeImportance(2)" class="setting-imp2">
+				<span class="font-small">
+					<span class="jp">重要</span>
+					<span class="en">Important</span>
+				</span>
+				<span class="setting_2-fa-icon"> </span>
+			</ons-button>
+
+			<ons-button onclick="changeImportance(3)" class="setting-imp3">
+				<span class="font-small">
+					<span class="jp">非常に重要</span>
+					<span class="en">Very important</span>
+				</span>
+				<span class="setting_2-fa-icon"> </span>
+			</ons-button>
+		</div>
+	</div>
+</ons-page>

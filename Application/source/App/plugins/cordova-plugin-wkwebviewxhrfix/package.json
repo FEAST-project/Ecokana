@@ -1,0 +1,53 @@
+{
+  "_from": "cordova-plugin-wkwebviewxhrfix",
+  "_id": "cordova-plugin-wkwebviewxhrfix@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-G8k6haZIrxQ01ixbpFNUYzw1sumqhlyS0FRVmbQyb33XD9uRNoDE8a8hvzDnZgYTZRVnsmjRhlxHgEYSERK27A==",
+  "_location": "/cordova-plugin-wkwebviewxhrfix",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-wkwebviewxhrfix",
+    "name": "cordova-plugin-wkwebviewxhrfix",
+    "escapedName": "cordova-plugin-wkwebviewxhrfix",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-wkwebviewxhrfix/-/cordova-plugin-wkwebviewxhrfix-0.1.0.tgz",
+  "_shasum": "062472496af46bff180a249eccbcd53a8b6a8d4e",
+  "_spec": "cordova-plugin-wkwebviewxhrfix",
+  "_where": "C:\\Users\\Public\\Documents\\Ecokana\\repository\\App",
+  "author": {
+    "name": "Matt Ray"
+  },
+  "bugs": {
+    "url": "https://github.com/themattray/cordova-plugin-wkwebviewxhrfix/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-wkwebviewxhrfix",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova plugin to fix local file XHR access inside WKWebView",
+  "homepage": "https://github.com/themattray/cordova-plugin-wkwebviewxhrfix#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-wkwebviewxhrfix",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themattray/cordova-plugin-wkwebviewxhrfix.git"
+  },
+  "version": "0.1.0"
+}

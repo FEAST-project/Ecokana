@@ -1,0 +1,198 @@
+﻿{
+	"IDEA" :[
+			{ 	
+				"id" : 1,  
+				"jp" : "地元産もしくは近隣都道府県産ですか", 
+				"en" : "Is this product produced locally or in a neighboring prefecture?", 
+				"ans" : [
+					{"no":1,"jp":"はい","en":"Yes"},
+					{"no":2,"jp":"いいえ","en":"No"},
+					{"no":3,"jp":"わからない","en":"Not Sure"}
+				]
+			},
+			{ 	
+				"id" : 2,  
+				"jp" : "遺伝子組み換え・遺伝子編集に関する情報はありますか", 
+				"en" : "Is there any information on gene modification and/or genome editing?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 3,  
+				"jp" : "生産者もしくは製造者の労働環境や公正な取引に向けた取り組みの情報はありますか", 
+				"en" : "Is there any information on the employees' work environment and/or the company/producer's activities on fair trade?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 4,  
+				"jp" : "賞味／消費期限を迎えた売れ残り商品の行方に関する情報はありますか", 
+				"en" : "Is there any information on what will happen to this product after its best-before and/or expiry date?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 5,  
+				"jp" : "プラスチックごみ、マイクロプラスチックに関する取り組みの情報はありますか", 
+				"en" : "Is there any information on the company/producer's activities on reducing plasticwaste and/or microplastics?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 6,  
+				"jp" : "日本語以外の表示を追加できるとしたら、どの言語がいいですか", 
+				"en" : "Which language option other than Japanese should be available for this product?", 
+				"ans" : [
+					{"no":6,"jp":"すでにある","en":"Labeled in other languages"},
+					{"no":1,"jp":"英語","en":"English"},
+					{"no":2,"jp":"スペイン語","en":"Spanish"},
+					{"no":3,"jp":"中国語","en":"Chinese"},
+					{"no":4,"jp":"韓国語","en":"Korean"},
+					{"no":5,"jp":"その他","en":"Others"}					
+				]
+			},
+			{ 	
+				"id" : 7,  
+				"jp" : "アニマルウェルフェアに関する取り組みの情報はありますか", 
+				"en" : "Is there any information on the company/producer’s activities on animal welfare?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 8,  
+				"jp" : "ハラル認証はありますか", 
+				"en" : "Is this product Halal certified?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 9,  
+				"jp" : "農薬・化学肥料の利用に関する情報はありますか", 
+				"en" : "Is there any information on use of pesticide and/or chemical fertilizer?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 10,  
+				"jp" : "この魚の近年の漁獲量・資源量に関する情報はありますか", 
+				"en" : "Is there any information on the recent catch and stock of this product?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			},
+			{ 	
+				"id" : 11,  
+				"jp" : "アレルギー物質に関する情報はありますか", 
+				"en" : "Is there any information on allergic substances?", 
+				"ans" : [
+					{"no":1,"jp":"ある","en":"Yes"},
+					{"no":2,"jp":"ない","en":"No"}
+				]
+			}
+			
+	],
+	"JICFS" :[
+		{ 	
+			"id" : 9,  
+			"jp" : "どこで買うかわからないような原材料は入っていますか", 
+			"en" : "Do the product contain ingredients which are not available to the public?", 
+			"ans" : [
+				{"no":1,"jp":"はい","en":"Yes"},
+				{"no":2,"jp":"いいえ","en":"No"}
+			]
+		},
+		{ 	
+			"id" : 1,  
+			"jp" : "原材料の産地に関する情報はありますか", 
+			"en" : "Is there any information on the production site of the ingredients?", 
+			"ans" : [
+				{"no":1,"jp":"はい","en":"Yes"},
+				{"no":2,"jp":"いいえ","en":"No"},
+				{"no":3,"jp":"わからない","en":"Not Clear"}
+			]
+		},
+		{ 	
+			"id" : 2,  
+			"jp" : "原材料の遺伝子組み換え・遺伝子編集に関する情報はありますか", 
+			"en" : "Is there any information on gene modification and/or genome editing of the ingredients?", 
+			"ans" : [
+				{"no":1,"jp":"ある","en":"Yes"},
+				{"no":2,"jp":"ない","en":"No"}
+			]
+		},
+		{ 	
+			"id" : 3,  
+			"jp" : "生産者もしくは製造者の労働環境や公正な取引に向けた取り組みの情報はありますか", 
+			"en" : "Is there any information on the employees' work environment and/or the company/producer's activities on fair trade?", 
+			"ans" : [
+				{"no":1,"jp":"ある","en":"Yes"},
+				{"no":2,"jp":"ない","en":"No"}
+			]
+		},
+		{ 	
+			"id" : 4,  
+			"jp" : "賞味／消費期限を迎えた売れ残り商品の行方に関する情報はありますか", 
+			"en" : "Is there any information on what will happen to this product after its best-before and/or expiry date?", 
+			"ans" : [
+				{"no":1,"jp":"ある","en":"Yes"},
+				{"no":2,"jp":"ない","en":"No"}
+			]
+		},
+		{ 	
+			"id" : 5,  
+			"jp" : "プラスチックごみ、マイクロプラスチックに関する取り組みの情報はありますか", 
+			"en" : "Is there any information on the company/producer's activities on reducing plastic waste and/or microplastics?", 
+			"ans" : [
+				{"no":1,"jp":"ある","en":"Yes"},
+				{"no":2,"jp":"ない","en":"No"}
+			]
+		},
+		{ 	
+			"id" : 6,  
+			"jp" : "あなたが避けるべきアレルギー物質が入っているかがわかりますか", 
+			"en" : "Is it clear to you whether this product contains any allergic compound that you should avoid?", 
+			"ans" : [
+				{"no":1,"jp":"わかる","en":"Clear"},
+				{"no":2,"jp":"わからない","en":"Not clear"}
+			]
+		},
+		{ 	
+			"id" : 7,  
+			"jp" : "ハラル認証がほしいですか", 
+			"en" : "Would you like this product to be Halal certified?", 
+			"ans" : [
+				{"no":3,"jp":"すでにある","en":"Labeled"},
+				{"no":1,"jp":"ほしい","en":"Yes"},
+				{"no":2,"jp":"なくてもいい","en":"Not really"}				
+			]
+		},
+		{ 	
+			"id" : 8,  
+			"jp" : "日本語以外の表示を追加できるとしたら、どの言語がいいですか", 
+			"en" : "Which language option other than Japanese should be available for this product?", 
+			"ans" : [
+				{"no":6,"jp":"すでにある","en":"Labeled in other languages"},
+				{"no":1,"jp":"英語","en":"English"},
+				{"no":2,"jp":"スペイン語","en":"Spanish"},
+				{"no":3,"jp":"中国語","en":"Chinese"},
+				{"no":4,"jp":"韓国語","en":"Korean"},
+				{"no":5,"jp":"その他","en":"Others"}				
+			]
+		}
+	]
+}

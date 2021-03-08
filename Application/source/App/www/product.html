@@ -1,0 +1,238 @@
+<!-- 商品ページ（IDEA/JICFS共通） -->
+<ons-page id="product.html">
+	<ons-toolbar class="product-toolbar">
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<!-- 通常の戻るボタンの機能削除-->
+			<!-- <ons-back-button onclick="navi.resetToPage('home.html', { animation : 'lift' } )"></ons-back-button>-->
+
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+				disabled="true"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央・右側の要素 -->
+		<div class="center">
+			<!-- 上段 -->
+			<div class="product-toolbar-top">
+				<span class="font-small">
+					<span class="product-top jp">商品名</span
+					><span class="product-top en">Product Name</span>
+				</span>
+				<span class="font-middle">
+					<span id="product-productName"></span>
+				</span>
+				<span class="font-small">
+					<span class="jp">
+						<img class="product-score10" src="img/common/product_10jp.png" />
+					</span>
+					<span class="en">
+						<img class="product-score10" src="img/common/product_10en.png" />
+					</span>
+				</span>
+			</div>
+			<!-- 下段 -->
+			<div class="product-toolbar-bottom">
+				<span class="font-small">
+					<span class="product-bottom jp">容量</span
+					><span class="product-bottom en">Volume</span>
+				</span>
+				<span class="font-middle">
+					<span id="product-volume"></span>
+				</span>
+				<span class="font-small">
+					<span class="jp">評価</span><span class="en">Score</span>
+					<span id="product-score" class="font-score"></span>
+				</span>
+			</div>
+		</div>
+	</ons-toolbar>
+
+	<!-- 表示中商品情報を保持-->
+	<input type="hidden" id="product-productID" />
+	<input type="hidden" id="product-tempType" />
+	<input type="hidden" id="product-tempCategory" />
+	<input type="hidden" id="product-initScore" />
+	<input type="hidden" id="product-tempScore" />
+	<input type="hidden" id="product-newScore" />
+	<input type="hidden" id="product-score_10" />
+
+	<div class="product-data">
+		<!-- 補足情報-->
+		<div class="right">
+			<span class="product-subData jp">placeHoloder</span>
+			<span class="product-subData en">placeHoloder</span>
+		</div>
+
+		<!-- 評価表示-->
+		<div class="center">
+			<table>
+				<tr>
+					<td>
+						<span class="jp">環境</span>
+						<span class="en">Environmental Impacts</span>
+					</td>
+					<td>
+						<span class="jp">社会</span>
+						<span class="en">Social Impacts</span>
+					</td>
+					<td>
+						<span class="jp">健康</span>
+						<span class="en">Public Health Impacts</span>
+					</td>
+				</tr>
+
+				<tr>
+					<td id="product-EnvImpacts" class="font-score">
+						<span></span>
+						<span class="jp"></span>
+						<span class="en"></span>
+					</td>
+					<td id="product-SocImpacts" class="font-score">
+						<span></span>
+						<span class="jp"></span>
+						<span class="en"></span>
+					</td>
+					<td id="product-HelImpacts" class="font-score">
+						<span></span>
+						<span class="jp"></span>
+						<span class="en"></span>
+					</td>
+				</tr>
+				<tr>
+					<td id="product-EnvImage"><img /></td>
+					<td id="product-SocImage"><img /></td>
+					<td id="product-HelImage"><img /></td>
+				</tr>
+			</table>
+		</div>
+		<p class="product-msg jp font_s"></p>
+		<p class="product-msg en font_s"></p>
+
+		<hr />
+
+		<!-- アンケート-->
+		<p class="jp font_s">
+			見える化アンケートにご協力をお願いします。<br />
+			パッケージの情報を見てアンケートに答えてください。<br />
+			回答を選択すると、これまでの集計結果が表示されます。
+		</p>
+		<p class="en font_s">
+			Please take a minute and complete the “visualization” survey.<br />
+			Please read the product information on the package and answer the
+			following survey.<br />
+			After completion of the survey, the collected results will be
+			displayed.<br />
+		</p>
+
+		<!-- アンケート項目はdrawProduct.jsで生成 -->
+	</div>
+
+	<!-- リクエスト数グラフ-->
+	<div class="product-requestRatio">
+		<p class="jp font_s">
+			<span class="product-requestRatio-view"></span>
+			<span class="product-requestRatio-outof">人中</span>
+			<span class="product-requestRatio-req"></span>
+			人が情報をリクエストしました。
+		</p>
+		<p class="en font_s">
+			<span class="product-requestRatio-req"></span>
+			<span class="product-requestRatio-outof">out of</span>
+			<span class="product-requestRatio-view"></span>
+			have submitted a request
+		</p>
+		<div class="product-requestRatio-bar">
+			<span class="product-requestRatio-bar-view">
+				<span class="product-requestRatio-bar-req"></span>
+			</span>
+		</div>
+	</div>
+
+	<!--「フッター説明」ダイアログ-->
+	<div class="footerDialog-popup">
+		<div class="footerDialog-content font-small">
+			<button
+				onclick="hideFooter()"
+				id="footerDialog-close"
+				class="ui-btn ui-shadow ui-corner-all"
+			>
+				<img
+					src="img/common/close.png"
+					width="16"
+					height="16"
+					style="vertical-align: middle; pointer-events: none"
+				/>
+			</button>
+			<span
+				style="display: table-cell; padding-top: 50px; padding-bottom: 10px"
+			>
+				<span
+					style="
+						display: table-cell;
+						width: 25vw;
+						text-align: center;
+						vertical-align: bottom; ;
+					"
+				>
+					<span class="jp" style="display: none"
+						>バーコードを<br />読み取る</span
+					>
+					<span class="en" style="display: none">Scan<br />barcodes</span>
+				</span>
+
+				<span
+					style="
+						display: table-cell;
+						width: 50vw;
+						text-align: center;
+						vertical-align: bottom;
+					"
+				>
+					<span class="jp" style="display: none"
+						>足りない情報を<br />リクエストする</span
+					>
+					<span class="en" style="display: none">
+						Request missing information<br />for this product</span
+					>
+				</span>
+
+				<span
+					style="
+						display: table-cell;
+						width: 25vw;
+						text-align: center;
+						vertical-align: bottom;
+					"
+				>
+					<span class="jp" style="display: none">ホームに戻る</span>
+					<span class="en" style="display: none">Go to<br />home screen</span>
+				</span>
+			</span>
+		</div>
+	</div>
+
+	<ons-bottom-toolbar class="product-bottom-bar">
+		<div class="product-footer">
+			<span onclick="navi.pushPage('scan.html', { animation : 'slide' } )"
+				><img class="product-footerIcon" src="img/common/barcode.png"
+			/></span>
+			<span onclick="" class="product-request"
+				><img class="product-footerIcon" src="img/common/情報リクエスト_a.png"
+			/></span>
+			<span
+				onclick="navi.resetToPage('home.html', {animation:'lift', data:{type:'backToHome'}} )"
+				><img class="product-footerIcon" src="img/common/ホームへ戻る_a.png"
+			/></span>
+		</div>
+	</ons-bottom-toolbar>
+
+	<!-- jqplotとscanのバグ対応　隠しグラフ-->
+	<div style="height: 1px; width: 1px">
+		<div
+			id="product-hdn-chart"
+			style="display: none; height: 1px; width: 1px"
+		></div>
+	</div>
+</ons-page>

@@ -1,0 +1,8 @@
+﻿{
+	"test": {
+		"api_url" : "https://******.sakura.ne.jp/test/public/" 
+	},
+	"test2": {
+		"api_url" : "https://******.sakura.ne.jp/test2/public/" 
+	}
+}

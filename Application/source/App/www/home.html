@@ -1,0 +1,135 @@
+<!-- ホーム画面 -->
+<ons-page id="home.html">
+	<!--「このアプリについて」ダイアログ-->
+	<div class="aboutDialog-popup">
+		<div class="aboutDialog-content">
+			<div style="text-align: right">
+				<button
+					onclick="hideAbout()"
+					id="aboutDialog-close"
+					class="ui-btn ui-shadow ui-corner-all"
+				>
+					<img
+						src="img/common/close.png"
+						width="16"
+						height="16"
+						style="vertical-align: middle; pointer-events: none"
+					/>
+				</button>
+			</div>
+			<span class="jp">
+				<span
+					>このアプリは、普段の生活では見ることのできない食品の環境、社会、健康への負荷・影響を「見える化」することを目的としています。</span
+				><span
+					>ですが、現段階では必要なデータベースの多くが公開されていないため、スコアの計算が出来なかったり、偏ったところがあります。</span
+				><span
+					>そこで、各商品ページのアンケートにご協力をお願いいたします。</span
+				><span
+					>頂いたご回答はスコア計算に反映されます。エコかなデータ作りに是非ご参加ください！</span
+				>
+			</span>
+			<span class="en">
+				<span
+					>This app is to measure and “visualize” the environmental, social and
+					health impacts of food products.</span
+				><span
+					>However, score calculation is incomplete since most of the necessary
+					data is not available.</span
+				><span
+					>Please fill in the survey in product pages toward further
+					visualization of food information.</span
+				><span>Your answer will be reflected in score calculation.</span
+				><span
+					>Thank you so much for your participation in building our
+					database!</span
+				>
+			</span>
+		</div>
+	</div>
+
+	<div class="home-top">
+		<div>
+			<!--  ロゴイメージ
+            <img class="home-logo BtoW" src="img/home/background.png">
+            -->
+			<div class="home-button-list">
+				<ons-button
+					onclick="navi.pushPage('scan.html', { animation : 'slide' } )"
+					class="home-SCAN home-font-small"
+				>
+					<span class="jp">バーコードを読み取る</span>
+					<span class="en">Scan Now!</span>
+				</ons-button>
+
+				<ons-button
+					onclick="navi.pushPage('JANCodeSearch.html', { animation : 'slide' } )"
+					class="home-SCAN home-font-small"
+				>
+					<span class="jp">JANコードで検索</span>
+					<span class="en">Search by JAN code</span>
+				</ons-button>
+
+				<ons-button
+					onclick="navi.pushPage('category.html', {animation:'slide', data:{type:'IDEA_1'}} )"
+					class="home-IDEA home-font-small"
+				>
+					<span class="jp">生鮮食品（肉、野菜、魚介類）、お惣菜</span>
+					<span class="en"
+						>Perishable Foods (Meats, Vegetables, Seafoods), Deli</span
+					>
+				</ons-button>
+
+				<span class="home-button-list-child">
+					<ons-button
+						onclick="navi.pushPage('category.html', {animation:'slide', data:{type:'JICFS_1'}} )"
+						class="home-JICFS home-font-small"
+					>
+						<span class="jp">商品一覧</span>
+						<span class="en">Database</span>
+					</ons-button>
+					<ons-button
+						onclick="navi.pushPage('setting_1.html', { animation : 'slide' } )"
+						class="home-SETTING home-font-small"
+					>
+						<span class="jp">設定</span>
+						<span class="en">Settings</span>
+					</ons-button>
+				</span>
+
+				<span class="home-button-list-child">
+					<ons-button
+						onclick="navi.pushPage('about.html', { animation : 'slide' } )"
+						class="home-about home-font-small"
+					>
+						<span class="jp">このアプリについて</span>
+						<span class="en">About this App</span>
+					</ons-button>
+					<ons-button
+						onclick="URLClick('https:\\/\\/www.feastproject.org\\/ecokana\\/');"
+						class="home-policy home-font-small"
+					>
+						<span class="jp">プライバシーポリシー</span>
+						<span class="en">Privacy Policy</span>
+					</ons-button>
+				</span>
+
+				<span class="en">
+					<ons-button
+						onclick="saveLanguage('jp')"
+						class="home-language-jp font-middle"
+					>
+						<ons-icon icon="globe" class="font-large"></ons-icon>
+					</ons-button>
+				</span>
+				<span class="jp">
+					<ons-button
+						onclick="saveLanguage('en')"
+						class="home-language-en font-middle"
+					>
+						<ons-icon icon="fa-globe" class="font-large"></ons-icon>
+					</ons-button>
+				</span>
+			</div>
+		</div>
+	</div>
+</ons-page>

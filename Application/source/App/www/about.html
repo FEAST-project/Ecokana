@@ -1,0 +1,209 @@
+<!-- このアプリについて -->
+<ons-page id="about.html">
+	<ons-toolbar class="about-toolbar">
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center about-title">
+			<div class="font-large">
+				<span class="about-title jp">このアプリについて</span
+				><span class="about-title en">About this App</span>
+			</div>
+		</div>
+	</ons-toolbar>
+
+	<div class="about-data">
+		<div class="center">
+			<div class="font-middle about">
+				<span class="jp">このアプリについて</span
+				><span class="en">About this App</span>
+			</div>
+			<div class="font-small about">
+				<span class="jp">
+					このアプリは、普段の生活では見ることのできない食品の環境、社会、健康への負荷・影響を「見える化」することを目的としています。
+					<br /><br />
+					商品ページで表示している環境、社会、健康に与える影響・負荷の評価、及び総合評価は以下の情報をもとに5段階評価で計算されています。環境、社会、健康のそれぞれに与える負荷・影響が小さな商品ほど、高い評価が得られます。商品カテゴリー内で総合評価が上位10%に入る商品については、
+					<img class="about-top10" src="img/common/list_10.png" />
+					表示をつけています。なお、データがないものについては計算に含めていません。より詳しい計算方法については
+					<a href="https://www.feastproject.org/ecokana/">こちら</a>
+					をご覧ください。
+				</span>
+				<span class="en">
+					This app is to measure the environmental, social and health impacts of
+					food products.
+					<br /><br />
+					The environmental, social and health impacts scores and the overall
+					score are calculated on a five-point scale. Products with smaller
+					environmental, social and health impacts will have higher impact score
+					and overall score. You can check "
+					<img class="about-top10" src="img/common/list_10.png" />
+					" of the overall score within the category on the product page and the
+					database list. Missing data is excluded from the calculation. Please
+					check
+					<a href="https://www.feastproject.org/en/ecokana/">here</a>
+					for details.
+				</span>
+				<hr />
+			</div>
+
+			<div class="font-small about">
+				<span class="jp">環境・社会・健康評価</span>
+				<span class="en">Environmental, Social and Health Scores</span>
+			</div>
+
+			<div>
+				<table border="1" style="border-collapse: collapse">
+					<tr>
+						<td class="font-small about">
+							<span class="jp">評価</span>
+							<span class="en">Score</span>
+						</td>
+						<td class="font-small about">
+							<span class="jp">計算結果</span>
+							<span class="en">Values</span>
+						</td>
+						<td class="font-small about">
+							<span class="jp">負荷</span>
+							<span class="en">Impacts</span>
+						</td>
+						<td class="font-small about">
+							<span class="jp">環境</span>
+							<span class="en">Environ<br />mental</span>
+							<img
+								style="height: 1.2em; vertical-align: inherit"
+								src="img/common/env.png"
+							/>
+						</td>
+						<td class="font-small about">
+							<span class="jp">社会</span>
+							<span class="en">Social</span>
+							<img
+								style="height: 1.2em; vertical-align: inherit"
+								src="img/common/soc.png"
+							/>
+						</td>
+						<td class="font-small about">
+							<span class="jp">健康</span>
+							<span class="en">Health</span>
+							<img
+								style="height: 1.2em; vertical-align: inherit"
+								src="img/common/hel.png"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<td class="font-small about">5.0</td>
+						<td class="font-small about">0~0.29</td>
+						<td
+							class="font-small about"
+							style="
+								border-bottom: none;
+								background: linear-gradient(#78f2ff, #8af578);
+							"
+						>
+							<span class="jp" style="color: black; text-shadow: none">小</span>
+							<span class="en" style="color: black; text-shadow: none"
+								>Low</span
+							>
+						</td>
+						<td><img class="illust" src="img/product/環境_5.png" /></td>
+						<td><img class="illust" src="img/product/社会_5.png" /></td>
+						<td><img class="illust" src="img/product/健康_5.png" /></td>
+					</tr>
+					<tr>
+						<td class="font-small about">4.0</td>
+						<td class="font-small about">0.3~0.49</td>
+						<td
+							class="font-small about"
+							style="
+								border: none;
+								background: linear-gradient(#8af578, #dfd33d);
+							"
+						></td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/環境_4.3.png" />
+						</td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/社会_4.3.png" />
+						</td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/健康_4.3.png" />
+						</td>
+					</tr>
+					<tr>
+						<td class="font-small about">3.0</td>
+						<td class="font-small about">0.5~0.79</td>
+						<td
+							class="font-small about"
+							style="
+								border: none;
+								background: linear-gradient(#dfd33d, #eaa96d);
+							"
+						></td>
+					</tr>
+					<tr>
+						<td class="font-small about">2.0</td>
+						<td class="font-small about">0.8~0.99</td>
+						<td
+							class="font-small about"
+							style="
+								border: none;
+								background: linear-gradient(#eaa96d, #ff54cc);
+							"
+						></td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/評価_2.1.png" />
+						</td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/評価_2.1.png" />
+						</td>
+						<td rowspan="2">
+							<img class="illust" src="img/product/評価_2.1.png" />
+						</td>
+					</tr>
+					<tr>
+						<td class="font-small about">1.0</td>
+						<td class="font-small about">1.0~</td>
+						<td
+							class="font-small about"
+							style="
+								border-top: none;
+								background: linear-gradient(#ff54cc, #663666);
+							"
+						>
+							<span class="jp" style="color: black; text-shadow: none">大</span>
+							<span class="en" style="color: black; text-shadow: none"
+								>High</span
+							>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="font-small about">
+				<hr />
+				<span class="jp">総合評価</span>
+				<span class="en">Overall Score</span>
+				<div>
+					<img class="about-overallScore" src="img/common/overallScore.png" />
+				</div>
+				<hr />
+			</div>
+
+			<div class="font-small about">
+				<span class="jp">
+					生鮮食品(肉・魚・野菜)のCO2の値は、人間文化研究機構総合地球環境学研究所のプロジェクト（FEASTプロジェクト No. 14200116）にて算出されました。
+				</span>
+				<span class="en">
+					CO2 emissions of perishable foods (meats, vegetables, seafoods) are based on calculation by FEAST Project (No.14200116), Research Institute for Humanity and Nature.
+				</span>
+			</div>
+
+		</div>
+	</div>
+</ons-page>

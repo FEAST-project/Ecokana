@@ -1,0 +1,374 @@
+/* 商品ページ（IDEA/JICFS共通） */
+/* ツールバー＿全体 */
+#product\.html ons-toolbar {
+	background: linear-gradient(#52a095, #67d699) !important;
+}
+.product-toolbar,
+.product-toolbar > div {
+	height: 13vh;
+	color: #ffffff;
+	font-size: 16px;
+	text-shadow: none;
+}
+
+/* ツールバー＿フォント */
+@media (min-width: 640px) {
+	.product-toolbar,
+	.product-toolbar > div {
+		font-size: calc(14px + ((1vw - 6.4px) * 2.5));
+	}
+}
+@media (min-width: 1200px) {
+	.product-toolbar,
+	.product-toolbar > div {
+		font-size: 30px;
+	}
+}
+
+/* メイン */
+#product\.html .page__content {
+	top: 12vh !important;
+	padding-top: 2vh;
+}
+
+/* ツールバー＿戻るボタン */
+.product-toolbar > .left {
+	height: 56px;
+	width: 13vw;
+	min-width: 13vw;
+	padding-left: 1vw;
+}
+.product-toolbar polygon {
+	fill: #ffffff;
+}
+
+/* ツールバー＿各情報を配置するためのテーブル */
+.product-toolbar table {
+	line-height: 20px;
+	font-weight: unset;
+	position: absolute;
+	text-align: left;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ツールバー＿商品名・容量ラベル用エリア */
+.product-toolbar div > span:nth-child(1) {
+	width: 13vw;
+	display: inline-table;
+	text-align: left;
+	white-space: normal;
+	line-height: 2.5vh;
+}
+
+/* ツールバー＿商品名ラベル */
+.product-top {
+	width: 13vw;
+	display: inline;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ツールバー＿商品名・容量用エリア */
+.product-toolbar div > span:nth-child(2) {
+	width: 47vw;
+	display: inline-table;
+	text-align: left;
+	white-space: normal;
+	line-height: 20px;
+}
+
+/* ツールバー＿商品名 */
+#product-productName {
+	width: 47vw;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 3vh;
+}
+
+/* ツールバー＿上位10%アイコン・評価用エリア */
+.product-toolbar div > span:nth-child(3) {
+	/*width:30vw;*/
+	padding-left: 1vw;
+	display: inline;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* ツールバー＿細長い画面のための調整 */
+@media (max-width: 330px) {
+	/* ツールバー＿商品名・容量ラベル用エリア */
+	.product-toolbar div > span:nth-child(1) {
+		width: 14vw;
+		display: inline-table;
+		text-align: left;
+		white-space: normal;
+		line-height: 15px;
+	}
+
+	/* ツールバー＿商品名ラベル */
+	.product-top {
+		width: 13vw;
+		display: inline;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	/* ツールバー＿商品名・容量用エリア */
+	.product-toolbar div > span:nth-child(2) {
+		width: 43vw;
+		display: inline-table;
+		text-align: left;
+		white-space: normal;
+		line-height: 20px;
+	}
+
+	/* ツールバー＿商品名 */
+	#product-productName {
+		width: 43vw;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+/* ツールバー＿容量ラベル */
+.product-bottom {
+	display: inline;
+	position: relative;
+}
+
+/* ツールバー＿上段 */
+.product-toolbar-top {
+	position: absolute;
+	top: 0;
+	height: 9vh;
+}
+
+/* ツールバー＿下段 */
+.product-toolbar-bottom {
+	position: absolute;
+	top: 8vh;
+	height: 4.5vh;
+	line-height: 4.5vh;
+}
+
+/* ツールバー＿評価 */
+.product-toolbar #product-score {
+	border-radius: 5px;
+	padding: 0px 7px;
+	margin-left: 3px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	line-height: 30px;
+}
+
+/* ツールバー＿上位10% */
+.product-toolbar .product-score10 {
+	height: 5vh;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* メイン */
+div.product-data {
+	font-size: 16px; /* 文字サイズ固定 */
+	color: #2f4f4f;
+	margin: auto;
+	width: 90vw;
+	padding-bottom: 18vh;
+}
+
+/* メイン＿右上（IDEA補足データ） */
+div.product-data .right {
+	text-align: right;
+	padding-top: 10px;
+}
+
+/* メイン＿情報表示用テーブル */
+div.product-data .center > table {
+	text-align: center;
+	padding-top: 10px;
+}
+div.product-data .center > table tr td {
+	width: 28vw;
+	padding: 0 1vw;
+}
+
+/* メイン＿イメージ */
+div.product-data img {
+	max-width: 27vw;
+	max-height: 15vh;
+}
+
+/* メイン＿フォント小 */
+div.product-data .font_s,
+div.product-requestRatio > .font_s {
+	font-size: 14px;
+}
+
+/* メイン＿データなし文言フォント */
+.font-scoreNodata {
+	font-size: xx-small;
+	color: #2f4f4f;
+}
+
+/* メイン＿アンケート用エリア */
+div.product-data [id^="qa"] {
+	margin-bottom: 2em;
+}
+
+/* メイン＿アンケート円グラフ */
+[id^="product-qa"] [id$="chart"] {
+	height: 150px;
+	width: 50vw;
+	display: none;
+}
+
+/* メイン＿アンケートフォント */
+[id^="product-qa"] .font_s {
+	padding-right: 5px;
+	padding-left: 2px;
+}
+
+/* メイン＿アンケートチェックボックス */
+[id^="product-qa"] ons-checkbox {
+	padding-bottom: 10px;
+}
+
+/* メイン＿アンケート円グラフラベル */
+[id^="product-qa"] label {
+	display: inline;
+}
+
+/* メイン＿アンケートラベル整列 */
+.jqplot-table-legend {
+	width: fit-content;
+}
+
+/* メイン＿アンケート＿jqplotとscanのバグ対応　隠しグラフ*/
+#product-hdn-chart canvas {
+	width: 1px !important;
+	height: 1px !important;
+	position: absolute;
+	top: -10vh;
+}
+
+/* フッター＿全体 */
+.product-bottom-bar {
+	height: 9vh;
+}
+
+/* フッター＿情報リクエスト比率エリア */
+.product-requestRatio {
+	width: 100vw;
+	background-color: #ffffff;
+	position: fixed;
+	bottom: calc(9vh - 1px);
+}
+
+/* フッター＿情報リクエスト比率グラフ・ラベル */
+.product-requestRatio > p {
+	display: inline;
+	position: relative;
+	top: 5px;
+	left: 10px;
+	color: gray;
+}
+.product-requestRatio-view,
+.product-requestRatio-req {
+	color: orangered !important;
+	font-size: 18px;
+}
+.product-requestRatio-bar {
+	padding: 10px 0px;
+	margin: 0px 10px;
+}
+.product-requestRatio-bar-view {
+	width: 100%;
+	height: 20px;
+	display: block;
+	background: lightgray;
+}
+.product-requestRatio-bar-req {
+	height: 100%;
+	background: linear-gradient(to right, yellow, red);
+	display: block;
+}
+
+/* フッター＿全体 */
+.product-footer {
+	width: 100vw;
+	height: calc(9vh + 1px);
+	display: flex;
+	background-color: #67d699;
+}
+.product-footer > span {
+	height: 100%;
+	display: inherit;
+}
+.product-footer > span:nth-child(1),
+.product-footer > span:nth-child(3) {
+	width: 20%;
+}
+.product-footer > span:nth-child(2) {
+	width: 60%;
+}
+
+/* フッター＿ボタン */
+.product-footerIcon {
+	height: 70%;
+	display: flex;
+	margin: auto;
+	margin-bottom: 2vh;
+/*	filter: brightness(0) invert(1); */
+}
+
+/* 情報リクエストボタン非活性 */
+.product-request-unable {
+	pointer-events: none;
+	background-color: darkseagreen;
+}
+.product-request-unable img {
+	filter: brightness(0) invert(0.5);
+}
+
+/* 「ホームに戻る」ダイアログメッセージ */
+.footerDialog-popup {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: inherit;
+	left: 0;
+	justify-content: flex-end;
+	align-items: flex-start;
+	z-index: 1000;
+}
+.footerDialog-content {
+	position: fixed;
+	background: #fff;
+	left: 1vw;
+	bottom: 10vh;
+	width: 98vw;
+	color: #1f1f21;
+	font-weight: normal;
+	border-radius: 3px;
+}
+#footerDialog-close {
+	display: unset;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	right: 1vw;
+	padding: 0;
+	padding-bottom: 2px;
+	box-shadow: none;
+}

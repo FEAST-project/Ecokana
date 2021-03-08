@@ -1,0 +1,104 @@
+<!-- 商品カテゴリー一覧（IDEA/JICFS共通） -->
+<ons-page id="category.html">
+	<ons-toolbar class="category-toolbar">
+		<!-- 「ホームに戻る」ダイアログ表示時にツールバーをモーダル-->
+		<div class="toHomeDialog-toolbar" style="top: 0"></div>
+
+		<!-- ツールバー左側の要素 -->
+		<div class="left">
+			<ons-back-button
+				onclick="navi.popPage({ animation : 'slide' } )"
+			></ons-back-button>
+		</div>
+
+		<!-- ツールバー中央の要素 -->
+		<div class="center category-title font-large">
+			<div>
+				<span class="category-title1jp jp"></span
+				><span class="category-title1en en"></span>
+			</div>
+			<div>
+				<span class="category-title2jp jp"></span
+				><span class="category-title2en en"></span>
+			</div>
+		</div>
+
+		<!-- ツールバー右側の要素 -->
+		<div
+			class="right"
+			onclick="navi.resetToPage('home.html', {animation:'lift', data:{type:'backToHome'}} )"
+		>
+			<img class="category-icon" src="img/common/ホームへ戻る_a.png" />
+		</div>
+	</ons-toolbar>
+
+	<!--「ホームに戻る」ダイアログ-->
+	<div class="toHomeDialog-popup">
+		<div class="toHomeDialog-content font-small">
+			<span>
+				<span class="jp" style="vertical-align: middle">ホームに戻る</span>
+				<span class="en" style="vertical-align: middle">Go to home screen</span>
+				<button
+					onclick="hideToHome()"
+					id="toHomeDialog-close"
+					class="ui-btn ui-shadow ui-corner-all"
+				>
+					<img
+						src="img/common/close.png"
+						width="16"
+						height="16"
+						style="vertical-align: middle; pointer-events: none"
+					/>
+				</button>
+			</span>
+		</div>
+	</div>
+
+	<div class="category-data">
+		<div class="center">
+			<div class="category-button-list">
+				<!-- drawCategory.jsによって描画 -->
+				<!-- 構造は以下コメント部のようになる
+                <div class='category-button-list-child'>
+                    <ons-button onclick="navi.pushPage('category.html',{animation:'slide', data:{type:'IDEA_category2',code: 'xx'}})">
+                        <img class="category-icon" src="xxx.img">
+                        <span class="category-text">
+                            <div  class="font-middle">
+                                <span class="jp">xxx</span><span class="en">xxx</span>
+                            </div>
+                            <div  class="font-small">
+                                <span>xxx</span>
+                                <span class="jp">カテゴリー</span><span class="en">Categories</span>
+                            </div>
+                        </span>
+                    </ons-button>
+                    <ons-button onclick="navi.pushPage('category.html',{animation:'slide', data:{type:'IDEA_category2',code: 'xx'}})">
+                        <img class="category-icon" src="xxx.img">
+                        <span class="category-text">
+                            <div  class="font-middle">
+                                <span class="jp">xxx</span><span class="en">xxx</span>
+                            </div>
+                            <div  class="font-small">
+                                <span>xxx</span>
+                                <span class="jp">カテゴリー</span><span class="en">Categories</span>
+                            </div>
+                        </span>
+                    </ons-button>
+                </div>
+             -->
+			</div>
+		</div>
+	</div>
+
+	<ons-bottom-toolbar>
+		<!--「ホームに戻る」ダイアログ表示時にツールバーをモーダル-->
+		<div class="toHomeDialog-toolbar"></div>
+		<div class="category-footer">
+			<span onclick="navi.pushPage('scan.html', { animation : 'slide' } )"
+				><img class="category-footerIcon" src="img/common/barcode.png"
+			/></span>
+			<span onclick=""></span>
+			<span onclick=""></span>
+		</div>
+	</ons-bottom-toolbar>
+</ons-page>

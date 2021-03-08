@@ -1,0 +1,5 @@
+ALTER TABLE IDEA ADD INDEX IDEA_productid(`Product_ID`);
+
+ALTER TABLE IDEA ADD INDEX IDEA_class(`äøéöï™óﬁñº`);
+
+ALTER TABLE IDEA ADD INDEX IDEA_productname(`êªïiñº`);

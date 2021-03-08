@@ -1,0 +1,1 @@
+ALTER TABLE IDEA_questionnaire ADD INDEX IDEAQA_productid(`Product_ID`);
